@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://groundpulse.ai/schemas/pass.schema.json",
+  "title": "GroundPulse synthetic pass row",
+  "type":"object", "additionalProperties":false,
+  "required":["pass_id","satellite_id","station_id","aos_time","los_time","max_elevation_deg","expected_duration_sec","actual_duration_sec","pass_status","average_snr_db","anomaly_count"],
+  "properties": {
+    "pass_id":{"type":"string","pattern":"^SIM-PASS-[0-9]{3}$"},
+    "satellite_id":{"type":"string","pattern":"^SIM-SAT-"},
+    "station_id":{"type":"string","pattern":"^SIM-GS-"},
+    "aos_time":{"type":"string","format":"date-time"}, "los_time":{"type":"string","format":"date-time"},
+    "max_elevation_deg":{"type":"number","minimum":0,"maximum":90},
+    "expected_duration_sec":{"type":"integer","minimum":0}, "actual_duration_sec":{"type":"integer","minimum":0},
+    "pass_status":{"enum":["NOMINAL","DEGRADED","INTERRUPTED","MISSED"]},
+    "average_snr_db":{"type":"number"}, "anomaly_count":{"type":"integer","minimum":0}
+  }
+}

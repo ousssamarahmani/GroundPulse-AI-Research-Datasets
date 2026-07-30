@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://groundpulse.ai/schemas/rf_metrics.schema.json",
+  "title": "GroundPulse synthetic RF metrics row",
+  "type": "object", "additionalProperties": false,
+  "required": ["timestamp","station_id","center_frequency_hz","bandwidth_hz","frequency_offset_hz","doppler_hz","snr_db","eb_no_db","signal_quality_score","carrier_lock"],
+  "properties": {
+    "timestamp":{"type":"string","format":"date-time"},
+    "station_id":{"type":"string","pattern":"^SIM-GS-"},
+    "center_frequency_hz":{"type":"number","exclusiveMinimum":0},
+    "bandwidth_hz":{"type":"number","exclusiveMinimum":0},
+    "frequency_offset_hz":{"type":"number"},
+    "doppler_hz":{"type":"number"},
+    "snr_db":{"type":"number"}, "eb_no_db":{"type":"number"},
+    "signal_quality_score":{"type":"integer","minimum":0,"maximum":100},
+    "carrier_lock":{"enum":["LOCKED","DEGRADED","UNLOCKED"]}
+  }
+}

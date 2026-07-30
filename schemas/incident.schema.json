@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://groundpulse.ai/schemas/incident.schema.json",
+  "title": "GroundPulse synthetic incident row",
+  "type":"object", "additionalProperties":false,
+  "required":["incident_id","start_time","end_time","station_id","related_pass_id","incident_type","severity","status","summary","probable_cause","research_recommendation"],
+  "properties": {
+    "incident_id":{"type":"string","pattern":"^SIM-INC-[0-9]{3}$"},
+    "start_time":{"type":"string","format":"date-time"}, "end_time":{"type":"string","format":"date-time"},
+    "station_id":{"type":"string","pattern":"^SIM-GS-"}, "related_pass_id":{"type":"string","pattern":"^SIM-PASS-"},
+    "incident_type":{"type":"string"}, "severity":{"enum":["LOW","MEDIUM","HIGH"]},
+    "status":{"const":"SYNTHETIC_CLOSED"}, "summary":{"type":"string","minLength":1},
+    "probable_cause":{"type":"string","minLength":1}, "research_recommendation":{"type":"string","minLength":1}
+  }
+}

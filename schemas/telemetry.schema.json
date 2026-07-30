@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://groundpulse.ai/schemas/telemetry.schema.json",
+  "title": "GroundPulse synthetic telemetry row",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["timestamp","station_id","satellite_id","pass_id","snr_db","eb_no_db","temperature_c","packet_loss_pct","carrier_lock","antenna_state","modem_state","anomaly_label"],
+  "properties": {
+    "timestamp": {"type":"string","format":"date-time"},
+    "station_id": {"type":"string","pattern":"^SIM-GS-[A-Z]+-[0-9]{2}$"},
+    "satellite_id": {"type":"string","pattern":"^SIM-SAT-[A-Z]+-[0-9]{2}$"},
+    "pass_id": {"type":"string","pattern":"^SIM-PASS-[0-9]{3}$"},
+    "snr_db": {"type":"number","minimum":-20,"maximum":60},
+    "eb_no_db": {"type":"number","minimum":-30,"maximum":50},
+    "temperature_c": {"type":"number","minimum":-80,"maximum":150},
+    "packet_loss_pct": {"type":"number","minimum":0,"maximum":100},
+    "carrier_lock": {"enum":["LOCKED","DEGRADED","UNLOCKED"]},
+    "antenna_state": {"enum":["TRACKING","SLEWING","STOWED","FAULT"]},
+    "modem_state": {"enum":["DEMOD_ACTIVE","STANDBY","FAULT"]},
+    "anomaly_label": {"type":"string"}
+  }
+}

@@ -1,6 +1,6 @@
 {
-  "name": "GroundPulse AI",
-  "description": "Open research initiative for synthetic satellite ground-station telemetry, RF health monitoring, baseline anomaly detection, and ground-segment operational intelligence.",
+  "name": "GroundPulse AI Research",
+  "description": "Open research interface for source-backed satellite data, explicitly documented synthetic telemetry, and ground-segment analysis experiments.",
   "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+  "majorCapabilities": []
 }
