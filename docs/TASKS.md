@@ -1,6 +1,6 @@
 # GroundPulse AI Task Backlog
 
-Status date: 2026-07-30. Statuses describe repository evidence, not product maturity.
+Status date: 2026-08-05. Statuses describe repository evidence, not product maturity.
 
 ## Status definitions
 
@@ -76,19 +76,31 @@ Predictive maintenance, incident retrieval, RAG, mission reporting, multi-statio
 | ID | Website section | Status | Priority | Dependencies | Definition of done |
 |---|---|---|---|---|---|
 | WEB-01 | Navigation | In progress | P0 | FND-03 | Clear emblem, section links, active/focus states, and responsive menu |
-| WEB-02 | Hero and logo | In progress | P0 | WEB-01 | Full logo, research headline, zero-record status, and no operational claim above the fold |
-| WEB-03 | About GroundPulse | Planned | P0 | FND-01 | Research scope and current repository focus are explained honestly |
-| WEB-04 | Ground-segment data problem | Planned | P1 | WEB-03 | Technical problem statement contains no unsupported numbers or fear-based claims |
-| WEB-05 | Research approach | Planned | P0 | GOV-01..05 | Source-to-research workflow separates current, planned, and future work |
-| WEB-06 | Intended data sources | In progress | P0 | GOV-01..05 | Five sources show role, governance requirement, and “not collected” state |
-| WEB-07 | Repository foundation | In progress | P1 | FND-04 | Displayed structure matches real files and contains no fake previews |
-| WEB-08 | Current project status | Planned | P0 | All phase owners | Evidence-backed status matrix is visible and dated |
-| WEB-09 | Research principles | Planned | P1 | GOV policies | Principles map to repository policies and controls |
-| WEB-10 | Roadmap | Planned | P1 | docs/implementation_plan.md | Sequential phases, dependencies, and blockers are shown without false dates |
+| WEB-02 | Hero and logo | Complete | P0 | WEB-01 | Full logo, research headline, zero-record status, and no operational claim above the fold |
+| WEB-03 | About GroundPulse | Complete | P0 | FND-01 | Research scope and current repository focus are explained honestly |
+| WEB-04 | Ground-segment data problem | Complete | P1 | WEB-03 | Technical problem statement contains no unsupported numbers or fear-based claims |
+| WEB-05 | Research approach | Complete | P0 | GOV-01..05 | Source-to-research workflow separates current, planned, and future work |
+| WEB-06 | Intended data sources | Complete | P0 | GOV-01..05 | Five sources show role, governance requirement, and “not collected” state |
+| WEB-07 | Repository foundation | Complete | P1 | FND-04 | Displayed structure matches real files and contains no fake previews |
+| WEB-08 | Current project status | Complete | P0 | All phase owners | Evidence-backed status matrix is visible and dated |
+| WEB-09 | Research principles | Complete | P1 | GOV policies | Principles map to repository policies and controls |
+| WEB-10 | Roadmap | Complete | P1 | docs/implementation_plan.md | Sequential phases, dependencies, and blockers are shown without false dates |
 | WEB-11 | Documentation | Planned | P1 | Existing documents | Every card links to an existing document; no placeholder content |
-| WEB-12 | Vision and StellarOS context | Planned | P2 | FND-01 | StellarOS and advanced intelligence are clearly marked future vision |
-| WEB-13 | Research call to action | Planned | P2 | WEB-10,WEB-11 | Actions point to architecture, tasks, policy, contribution, and repository |
-| WEB-14 | Footer and disclaimer | Planned | P1 | FND-03 | Full logo, license, external-source notice, zero-data state, and disclaimer |
-| WEB-15 | Responsive implementation | Planned | P0 | WEB-01..14 | Desktop, tablet, and mobile layouts remain readable without overflow |
-| WEB-16 | Accessibility verification | Planned | P0 | WEB-15 | Landmarks, headings, focus, keyboard, contrast, alt text, and reduced motion pass review |
-| WEB-17 | Browser and production QA | Planned | P0 | WEB-16 | TypeScript, production build, console, links, and supported viewports pass |
+| WEB-12 | Vision and StellarOS context | Complete | P2 | FND-01 | StellarOS and advanced intelligence are clearly marked future vision |
+| WEB-13 | Research call to action | In progress | P2 | WEB-10,WEB-11 | Actions point to architecture, tasks, policy, contribution, and repository |
+| WEB-14 | Footer and disclaimer | In progress | P1 | FND-03 | Full logo, license, external-source notice, zero-data state, and disclaimer |
+| WEB-15 | Responsive implementation | In progress | P0 | WEB-01..14 | Desktop, tablet, and mobile layouts remain readable without overflow |
+| WEB-16 | Accessibility verification | In progress | P0 | WEB-15 | Landmarks, headings, focus, keyboard, contrast, alt text, and reduced motion pass review |
+| WEB-17 | Browser and production QA | Blocked | P0 | WEB-16 | TypeScript and production build pass; browser visual QA remains blocked by local URL policy |
+## Public research portal tasks
+
+| ID | Portal area | Status | Priority | Dependencies | Definition of done |
+|---|---|---|---|---|---|
+| PRT-01 | Unified research portal shell | Planned | P0 | WEB-01..17 | Research, Datasets, Notebooks, Methodology, Documentation, and GitHub navigation works responsively |
+| PRT-02 | Dataset catalog | Planned | P0 | PRT-01 | Zero-release state and intended sources render without fabricated records |
+| PRT-03 | Dataset release detail | Blocked | P0 | DAT-05 | Provenance, schema, license, checksum, coverage, limitations, and download are manifest-driven |
+| PRT-04 | Notebook registry | Planned | P1 | PRT-01 | Notebook specifications are public and marked awaiting data until releases exist |
+| PRT-05 | Methodology index | Planned | P1 | Existing policies | Governance, collection, validation, transformation, and publication guidance is navigable |
+| PRT-06 | Documentation index | Planned | P1 | Existing documents | Every entry links to a real repository document or schema |
+| PRT-07 | Public route accessibility | Planned | P0 | PRT-01..06 | Keyboard, focus, headings, reduced motion, and responsive layouts pass review |
+| PRT-08 | Authentication decision | Deferred | P3 | Private workflow requirement | Authentication is added only for private uploads, saved work, partners, or credentials |

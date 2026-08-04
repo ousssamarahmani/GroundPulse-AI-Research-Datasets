@@ -1,5 +1,7 @@
 # Implementation plan
 
+Status updated: 2026-08-05.
+
 ## Phase 1 - Clean repository foundation (complete)
 
 - Separate raw, processed, and sample data layers.
@@ -46,7 +48,6 @@ Acceptance: the first raw snapshot is traceable, licensed for the intended use, 
 Acceptance: every published field maps to a source field or a documented deterministic calculation.
 
 Production services, operational integrations, agent orchestration, autonomous commands, and proprietary platform code remain outside this repository.
-
 ## Phase 2A - Public-facing SpaceTech research page
 
 Objective: create a credible public research website that communicates the project idea, current repository state, research boundaries, intended sources, and long-term vision without presenting planned systems as implemented.
@@ -150,3 +151,27 @@ Acceptance: no fake address, investors, partners, certifications, or operational
 Test desktop, laptop, tablet, and mobile layouts. Verify heading order, landmarks, keyboard operation, focus states, contrast, image alternative text, reduced motion, and horizontal overflow.
 
 Acceptance: TypeScript, production build, automated accessibility checks, and manual keyboard review pass.
+
+## Phase 2B - Public research portal (next)
+
+Objective: extend the public landing page into a research portal without introducing authentication, fabricated datasets, or simulated operational dashboards.
+
+### Portal information architecture
+
+- Research: public project overview, current status, principles, and roadmap.
+- Datasets: release catalog, provenance, schemas, licensing, checksums, limitations, and downloads.
+- Notebooks: versioned notebook specifications and reproducible analyses linked to approved releases.
+- Methodology: governance, collection, transformation, validation, and publication process.
+- Documentation: README, architecture, schemas, data dictionary, policies, tasks, security, citation, and contribution guidance.
+- GitHub: canonical repository and contribution workflow.
+
+### Delivery sequence
+
+1. Implement the unified research portal navigation and route structure.
+2. Add an honest dataset catalog with a zero-release state.
+3. Add a notebook registry that marks specifications as awaiting approved data.
+4. Add methodology and documentation indexes linked only to existing files.
+5. Add release-manifest-driven rendering after the first approved dataset exists.
+6. Add authentication only if future workflows require private uploads, saved sessions, partner datasets, or credential management.
+
+Acceptance: all public research areas work without authentication, planned capabilities remain clearly labeled, and no interface displays invented records, telemetry, analysis results, or operational status.
