@@ -119,6 +119,10 @@ The website is a research repository overview. It does not visualize data until 
 
 See `docs/implementation_plan.md`, `docs/TASKS.md`, `docs/data_sources.md`, and `docs/limitations.md` for detailed controls.
 
+
+## Academic research paper
+
+The research design, provenance model, governance framework, dataset-construction methodology, and planned evaluation protocol are documented in the [academic research paper](docs/academic_research_paper.md). The paper reports no empirical results because no approved dataset release exists yet.
 ## License
 
 Repository code is Apache-2.0. External source records retain their original terms; this repository does not relicense SatNOGS, CelesTrak, NOAA, or supplied logs.

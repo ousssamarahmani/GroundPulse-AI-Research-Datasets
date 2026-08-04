@@ -104,3 +104,10 @@ Predictive maintenance, incident retrieval, RAG, mission reporting, multi-statio
 | PRT-06 | Documentation index | Planned | P1 | Existing documents | Every entry links to a real repository document or schema |
 | PRT-07 | Public route accessibility | Planned | P0 | PRT-01..06 | Keyboard, focus, headings, reduced motion, and responsive layouts pass review |
 | PRT-08 | Authentication decision | Deferred | P3 | Private workflow requirement | Authentication is added only for private uploads, saved work, partners, or credentials |
+## Research publication tasks
+
+| ID | Publication task | Status | Priority | Dependency | Definition of done |
+|---|---|---|---|---|---|
+| PUB-01 | Research design paper | Complete | P1 | Repository architecture | Paper documents the problem, architecture, governance, methodology, limitations, and planned evaluation without claiming empirical results |
+| PUB-02 | Finalize citation metadata | Blocked | P1 | Confirmed author metadata | CITATION.cff contains verified author identity, repository URL, release date, and preferred citation |
+| PUB-03 | Empirical results paper | Blocked | P2 | DAT-05, ANA-01..04 | Peer-review-ready experiments use an approved dataset, reproducible environment, transparent baselines, and reported uncertainty |
